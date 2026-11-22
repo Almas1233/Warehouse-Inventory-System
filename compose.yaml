@@ -1,0 +1,22 @@
+﻿services:
+  warehouseinventorysystem.webapi:
+    image: warehouseinventorysystem.webapi
+    build:
+      context: .
+      dockerfile: WarehouseInventorySystem.WebApi/Dockerfile
+      
+    volumes:
+      - C:/WarehouseSecrets:/data
+
+  warehouseinventorysystem.webapi-1:
+    image: warehouseinventorysystem.webapi-1
+    build:
+      context: .
+      dockerfile: WarehouseInventorySystem.WebApi/Dockerfile
+
+  warehouseinventorysystem.webapi-2:
+    image: warehouseinventorysystem.webapi-2
+    build:
+      context: .
+      dockerfile: WarehouseInventorySystem.WebApi/Dockerfile
+
