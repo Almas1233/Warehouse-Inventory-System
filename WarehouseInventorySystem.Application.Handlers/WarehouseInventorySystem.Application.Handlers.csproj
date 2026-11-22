@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\WarehouseInventorySystem.Domain.InventoryBalance\WarehouseInventorySystem.Domain.InventoryBalance.csproj" />
+      <ProjectReference Include="..\WarehouseInventorySystem.Domain.Products\WarehouseInventorySystem.Domain.Products.csproj" />
+      <ProjectReference Include="..\WarehouseInventorySystem.Domain.Warehouses\WarehouseInventorySystem.Domain.Warehouses.csproj" />
+      <ProjectReference Include="..\WarehouseInventorySystem.Infrastructure.SQLServer\WarehouseInventorySystem.Infrastructure.SQLServer.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Features\Storage\**" />
+      <Compile Remove="Features\Inventories\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Features\Storage\**" />
+      <EmbeddedResource Remove="Features\Inventories\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Features\Storage\**" />
+      <None Remove="Features\Inventories\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="12.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Enums\" />
+    </ItemGroup>
+
+</Project>

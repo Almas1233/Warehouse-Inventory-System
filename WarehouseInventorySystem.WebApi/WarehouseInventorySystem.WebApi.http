@@ -1,0 +1,6 @@
+@WarehouseInventorySystem.WebApi_HostAddress = http://localhost:5194
+
+GET {{WarehouseInventorySystem.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
